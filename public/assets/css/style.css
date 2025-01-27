@@ -1,0 +1,29 @@
+
+      .sidebar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 250px;
+          background-color: #3689db;
+          color: white;
+          padding-top: 20px;
+      }
+
+      .sidebar a {
+          color: white;
+          text-decoration: none;
+          padding: 10px;
+          display: block;
+      }
+
+      .sidebar a:hover {
+          background-color: #40de24;
+          border: none;
+      }
+
+      .content {
+          margin-left: 250px;
+          /* Marge pour éviter que le contenu ne se cache derrière la sidebar */
+          padding: 20px;
+      }
