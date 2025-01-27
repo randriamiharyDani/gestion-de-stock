@@ -30,7 +30,7 @@
 
                 </tbody>
             </table>
-            <button type="submit">submit</button>
+            <button class="btn btn-primary btn-outline btn-block " type="submit">submit</button>
         </form>
         </div>
     </div>
@@ -41,7 +41,7 @@
 
             $('#product_id').on('change',function(){
 //                alert($(this).val())
-                let id= $(this).val();
+                let id = $(this).val();
                 $.ajax({
                     type : "get",
                     url : '/select-product/'+id,
@@ -50,11 +50,10 @@
                         $('#product-table-body').append(
                             ` <tr>
                                 <input type="hidden" value=`+data.id+` name='product[`+data.id+`]['id']'>
-                        <td class="py-2 px-4">`+data.name+`</td>
-                        <td class="py-2 px-4"><input type="number" name='product[`+data.id+`]['qte']'></td>
-                        <td class="py-2 px-4"><button class="btn btn-danger remove-item">delete</button></td>
-                    </tr>
-
+                                <td class="py-2 px-4">`+data.name+`</td>
+                                <td class="py-2 px-4"><input type="number" class="bg-slate-400" name='product[`+data.id+`]['qte']'></td>
+                                <td class="py-2 px-4"><button class="btn btn-danger remove-item">delete</button></td>
+                            </tr>
                             `
                         )
                     },
